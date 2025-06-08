@@ -22,7 +22,7 @@ const config = {
       fallback: '200.html'  // Add fallback here
     }),
     paths: {
-      base: dev ? '' : '/htmltoolkit.github.io',
+      base: ''
     },
     prerender: {
       crawl: true,
