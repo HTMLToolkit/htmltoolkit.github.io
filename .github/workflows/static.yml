@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main] # or 'master' depending on your repo
+    branches: [main]
 
 permissions:
   contents: write
@@ -10,11 +10,6 @@ permissions:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
-
-    defaults:
-      run:
-        working-directory: htmltoolkit
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -25,13 +20,19 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm ci
+        run: cd htmltoolkit && npm ci
 
       - name: Build the site
-        run: npm run build
+        run: cd htmltoolkit && npm run build
+
+      - name: Rename 200.html to 404.html for GitHub Pages SPA fallback
+        run: |
+          if [ -f htmltoolkit/build/200.html ]; then
+            mv htmltoolkit/build/200.html htmltoolkit/build/404.html
+          fi
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages            # Target branch
-          folder: htmltoolkit/build  # Path from root to built site
+          branch: gh-pages
+          folder: htmltoolkit/build
