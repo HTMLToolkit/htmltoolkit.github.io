@@ -1,10 +1,10 @@
 import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-import path from 'path';
+
+const dev = process.env.NODE_ENV === 'development';
 
 const config = {
-  // still allow Svelte files, but mdsvex won't touch .svelte
   extensions: ['.svelte', '.svx', '.md'],
 
   preprocess: [
@@ -12,7 +12,6 @@ const config = {
       postcss: true,
       typescript: true,
     }),
-    // only process .svx and .md with mdsvex
     mdsvex({
       extensions: ['.svx', '.md']
     })
@@ -20,8 +19,12 @@ const config = {
 
   kit: {
     adapter: adapter(),
-    alias: {
-      $lib: path.resolve('./src/lib')
+    paths: {
+      base: dev ? '' : '/htmltoolkit.github.io',
+    },
+    prerender: {
+      crawl: true,
+      entries: ['*']
     }
   }
 };
