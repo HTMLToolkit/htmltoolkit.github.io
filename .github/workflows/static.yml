@@ -30,6 +30,8 @@ jobs:
           if [ -f htmltoolkit/build/200.html ]; then
             mv htmltoolkit/build/200.html htmltoolkit/build/404.html
           fi
+          touch htmltoolkit/build/.nojekyll
+
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
