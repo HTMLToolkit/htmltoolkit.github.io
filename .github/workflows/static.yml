@@ -10,6 +10,11 @@ permissions:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: htmltoolkit
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -20,7 +25,7 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: cd htmltoolkit && npm ci
+        run: npm ci
 
       - name: Build the site
         run: npm run build
@@ -28,5 +33,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages         # target branch
-          folder: build            # output folder from `adapter-static`
+          branch: gh-pages            # Target branch
+          folder: htmltoolkit/build  # Path from root to built site
