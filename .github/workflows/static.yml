@@ -20,7 +20,7 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: cd Build && npm ci
+        run: cd htmltoolkit && npm ci
 
       - name: Build the site
         run: npm run build
