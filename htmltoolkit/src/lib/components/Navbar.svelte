@@ -43,7 +43,7 @@
       </button>
 
       {#if showTools}
-        <div class="absolute top-16 left-0 w-40 bg-black/50 backdrop-blur-md rounded shadow-lg py-3 z-50">
+        <div class="absolute top-16 left-0 w-50 bg-black/50 backdrop-blur-md rounded shadow-lg py-3 z-50">
           <a href="/abouthtmlrunner" class="block px-4 py-2 nav-link hover:bg-white/10">HTMLRunner</a>
           <a href="/abouthtmlplayer" class="block px-4 py-2 nav-link hover:bg-white/10">HTMLPlayer</a>
           <a href="/abouthtmlreader" class="block px-4 py-2 nav-link hover:bg-white/10">HTMLReader</a>
