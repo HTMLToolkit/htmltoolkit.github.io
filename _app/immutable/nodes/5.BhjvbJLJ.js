@@ -1,0 +1,1 @@
+import"../chunks/CWj6FrbW.js";import"../chunks/DEQ1j3BG.js";import{f as e,a as s}from"../chunks/DqLPb9fO.js";var n=e('<section class="fade-in-down"><h2 class="text-2xl font-semibold mb-4">HTMLRunner</h2> <p>This is where the docs will go.</p></section>');function p(o){var t=n();s(o,t)}export{p as component};
