@@ -8,41 +8,53 @@
 </section>
 
 <div class="grid gap-8 lg:grid-cols-3">
-  <a href="/htmlrunner" class="card fade-in-up" style="animation-delay: 0s;">
-    <div class="card-img">
-      <img src="https://htmltoolkit.github.io/HTMLRunner/favicon.png" alt="HTMLRunner icon" />
+  <a href="/abouthtmlrunner" class="card fade-in-up" style="animation-delay: 0s;">
+    <div class="card-img aspect-[1/1]">
+      <img src="https://htmltoolkit.github.io/HTMLRunner/favicon.png" alt="HTMLRunner icon" class="w-full h-full object-contain" />
     </div>
-    <span class="font-semibold">HTMLRunner</span>
+    <span class="font-semibold">HTMLRunner</span>    
+    <p class="text-sm text-gray-200">Run HTML, CSS, and JavaScript code directly in your browser.</p>
   </a>
 
-  <a href="/htmlplayer" class="card fade-in-up" style="animation-delay: 0.1s;">
-    <div class="card-img">
+  <a href="/abouthtmlplayer" class="card fade-in-up" style="animation-delay: 0.1s;">
+    <div class="card-img aspect-[1/1]">
       <img src="https://htmltoolkit.github.io/HTMLPlayer/favicon.png" alt="HTMLPlayer icon" />
     </div>
     <span class="font-semibold">HTMLPlayer</span>
+    <p class="text-sm text-gray-200">A basic (for now) completely local music player.</p>
   </a>
 
-  <a href="/htmlreader" class="card fade-in-up" style="animation-delay: 0.1s;">
-    <div class="card-img">
+  <a href="/abouthtmlreader" class="card fade-in-up" style="animation-delay: 0.1s;">
+    <div class="card-img aspect-[1/1]">
       <img src="https://htmltoolkit.github.io/HTMLReader/favicon.png" alt="HTMLReader icon" />
     </div>
     <span class="font-semibold">HTMLReader</span>
+    <p class="text-sm text-gray-200">Simple but usable HTML based ePub Reader.</p>
   </a>
 
-  <a href="/htmleditor" class="card fade-in-up" style="animation-delay: 0.1s;">
-    <div class="card-img">
+  <a href="/abouthtmleditor" class="card fade-in-up" style="animation-delay: 0.1s;">
+    <div class="card-img aspect-[1/1]">
       <img src="https://htmltoolkit.github.io/HTMLEditor/favicon.png" alt="HTMLEditor icon" />
     </div>
     <span class="font-semibold">HTMLEditor</span>
+    <p class="text-sm text-gray-200">A drag-and-drop HTML editor.</p>
   </a>
 
-  <a href="/htmlnodemapper" class="card fade-in-up" style="animation-delay: 0.1s;">
-    <div class="card-img">
+  <a href="/abouthtmlnodemapper" class="card fade-in-up" style="animation-delay: 0.1s;">
+    <div class="card-img aspect-[1/1]">
       <img src="https://htmltoolkit.github.io/HTMLNodeMapper/favicon.png" alt="HTMLNodeMapper icon" />
     </div>
     <span class="font-semibold">HTMLNodeMapper</span>
+    <p class="text-sm text-gray-200">Visualize HTML, CSS, and JavaScript code using a node based map.</p>
   </a>
 
+  <a href="/abouthtmlnotes" class="card fade-in-up" style="animation-delay: 0.1s;">
+    <div class="card-img aspect-[1/1]">
+      <img src="https://htmltoolkit.github.io/HTMLNotes/favicon.png" alt="HTMLNotes icon" />
+    </div>
+    <span class="font-semibold">HTMLNotes</span>
+    <p class="text-sm text-gray-200">A simple Markdown note taking app.</p>
+  </a>
 
   <!-- additional tool cards here -->
 </div>

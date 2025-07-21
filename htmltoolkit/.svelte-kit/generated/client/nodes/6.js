@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/htmlplayer/+page.svelte";
+export { default as component } from "../../../../src/routes/abouthtmlrunner/+page.svelte";

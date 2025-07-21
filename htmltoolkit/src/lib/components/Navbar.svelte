@@ -43,12 +43,13 @@
       </button>
 
       {#if showTools}
-        <div class="absolute top-16 left-0 w-120 bg-black/30 backdrop-blur-md rounded shadow-lg py-2 z-50">
-          <a href="/htmlrunner" class="block px-4 py-2 nav-link hover:bg-white/10">HTMLRunner</a>
-          <a href="/htmlplayer" class="block px-4 py-2 nav-link hover:bg-white/10">HTMLPlayer</a>
-          <a href="/htmlreader" class="block px-4 py-2 nav-link hover:bg-white/10">HTMLReader</a>
-          <a href="/htmleditor" class="block px-4 py-2 nav-link hover:bg-white/10">HTMLEditor</a>
-          <a href="/htmlnodemapper" class="block px-4 py-2 nav-link hover:bg-white/10">HTMLNodeMapper</a>
+        <div class="absolute top-16 left-0 w-40 bg-black/50 backdrop-blur-md rounded shadow-lg py-3 z-50">
+          <a href="/abouthtmlrunner" class="block px-4 py-2 nav-link hover:bg-white/10">HTMLRunner</a>
+          <a href="/abouthtmlplayer" class="block px-4 py-2 nav-link hover:bg-white/10">HTMLPlayer</a>
+          <a href="/abouthtmlreader" class="block px-4 py-2 nav-link hover:bg-white/10">HTMLReader</a>
+          <a href="/abouthtmleditor" class="block px-4 py-2 nav-link hover:bg-white/10">HTMLEditor</a>
+          <a href="/abouthtmlnodemapper" class="block px-4 py-2 nav-link hover:bg-white/10">HTMLNodeMapper</a>
+          <a href="/abouthtmlnotes" class="block px-4 py-2 nav-link hover:bg-white/10">HTMLNotes</a>
           <!-- add more tools here -->
         </div>
       {/if}

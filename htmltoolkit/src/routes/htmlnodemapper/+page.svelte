@@ -3,6 +3,6 @@
   import { goto } from '$app/navigation';
 
   onMount(() => {
-    goto('/HTMLRunner', { replaceState: true });
+    goto('/HTMLNodeMapper', { replaceState: true });
   });
 </script>

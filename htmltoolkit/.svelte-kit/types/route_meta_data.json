@@ -1,8 +1,15 @@
 {
 	"/": [],
+	"/abouthtmlplayer": [],
+	"/abouthtmlreader": [],
+	"/abouthtmlrunner": [],
 	"/about": [],
 	"/contact": [],
 	"/docs": [],
+	"/htmleditor": [],
+	"/htmlnodemapper": [],
+	"/htmlnotes": [],
 	"/htmlplayer": [],
+	"/htmlreader": [],
 	"/htmlrunner": []
 }

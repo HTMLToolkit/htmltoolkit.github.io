@@ -8,5 +8,8 @@ export default defineConfig({
     tailwindcss(),
     // 2) SvelteKit
     sveltekit()
-  ]
+  ],
+  server: {
+    allowedHosts: true
+  }
 });
