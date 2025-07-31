@@ -1,1 +1,0 @@
-import"../chunks/CWj6FrbW.js";import"../chunks/DEQ1j3BG.js";import{f as t,a as s}from"../chunks/DqLPb9fO.js";var a=t('<section class="fade-in-down"><h2 class="text-2xl font-semibold mb-4">HTMLReader</h2> <p>This is where the docs will go.</p></section>');function p(o){var e=a();s(o,e)}export{p as component};
