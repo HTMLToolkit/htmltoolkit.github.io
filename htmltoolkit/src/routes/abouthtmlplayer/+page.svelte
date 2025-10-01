@@ -9,6 +9,6 @@
   <p class="text-lg mb-6">HTMLPlayer is a simple audio player for HTML files.</p>
   <h3 class="text-1xl font-semibold mb-4">Getting Started</h3>
   <p class="text-lg mb-6">To use HTMLPlayer, simply upload your mp3 files and it will be played.</p>
-  <a class="text-lg mb-6" href="/HTMLPlayer">Go to HTMLPlayer</a>
-  <a class="text-lg mb-6" href="/beta/HTMLPlayer">Go to HTMLPlayerBeta</a>
+  <a class="text-lg mb-6" href="/HTMLPlayer">Go to HTMLPlayer</a><br>
+  <a class="text-lg mb-6" href="/beta/HTMLPlayerBeta">Go to HTMLPlayerBeta</a>
 </div>
