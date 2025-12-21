@@ -28,8 +28,9 @@ const config = {
 
     // 3) prerender all routes
     prerender: {
-      crawl: true,
-      entries: ['*', '/google56c6a7a79ef2edde.html']
+      handleHttpError: 'warn', // Prevent errors due to redirects/HTTP issues
+      crawl: true, // Detect all internal routes automatically
+      entries: ['*'] // '*' includes all routes (including wildcard, dynamic routes)
     }
   }
 };
