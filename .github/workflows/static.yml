@@ -23,7 +23,10 @@ jobs:
         run: cd htmltoolkit && npm ci
 
       - name: Build the site
-        run: cd htmltoolkit && npm run build
+        run: | 
+          cd htmltoolkit 
+          npm run build
+          npm run postbuild
 
       - name: Rename 200.html to 404.html for GitHub Pages SPA fallback
         run: |
