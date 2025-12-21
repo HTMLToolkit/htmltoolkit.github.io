@@ -9,6 +9,7 @@ export default defineConfig({
     // 2) SvelteKit
     sveltekit()
   ],
+  publicDir: "./public",
   server: {
     allowedHosts: true
   }

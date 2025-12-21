@@ -29,7 +29,7 @@ const config = {
     // 3) prerender all routes
     prerender: {
       crawl: true,
-      entries: ['*']
+      entries: ['*', '/google56c6a7a79ef2edde.html']
     }
   }
 };
