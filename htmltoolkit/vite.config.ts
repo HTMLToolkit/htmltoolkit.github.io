@@ -14,7 +14,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
+        main: resolve(__dirname, 'src/app.html'),
         google: resolve(__dirname, 'public/google56c6a7a79ef2edde.html')
       }
     }
