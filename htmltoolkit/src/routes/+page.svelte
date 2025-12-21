@@ -7,6 +7,8 @@
   <p class="text-center mb-8">A suite of modern browser-based HTML tools.</p>
 </section>
 
+<meta name="google-site-verification" content="TrGRbUrN4Q7uxW4dQAHpB2enlJrBOExIDLjf5OLO4G0" />
+
 <div class="grid gap-8 lg:grid-cols-3">
   <a href="/abouthtmlrunner" class="card fade-in-up" style="animation-delay: 0s;">
     <div class="card-img aspect-[1/1]">
