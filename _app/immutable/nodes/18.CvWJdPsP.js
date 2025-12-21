@@ -1,1 +1,0 @@
-import"../chunks/CWj6FrbW.js";import"../chunks/C1GoseCl.js";import{o as r}from"../chunks/b5YMJNeB.js";import{l as t,m as p}from"../chunks/DFSinFYO.js";import{i as m}from"../chunks/BXXYvB2B.js";import{g as a}from"../chunks/BwceSfbU.js";function g(i,o){t(o,!1),r(()=>{a("/HTMLRunner",{replaceState:!0})}),m(),p()}export{g as component};
