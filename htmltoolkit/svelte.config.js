@@ -15,11 +15,7 @@ const config = {
 
   kit: {
     // 1) adapter-static writes out build/index.html and build/200.html
-    adapter: adapter({
-      pages: 'build',
-      assets: 'build',
-      fallback: '200.html'
-    }),
+    adapter: adapter(),
 
     // 2) No base path since htmltoolkit.github.io is root
     paths: {
