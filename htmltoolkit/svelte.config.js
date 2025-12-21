@@ -28,9 +28,29 @@ const config = {
 
     // 3) prerender all routes
     prerender: {
-      handleHttpError: 'warn', // Prevent errors due to redirects/HTTP issues
-      crawl: true, // Detect all internal routes automatically
-      entries: ['*'] // '*' includes all routes (including wildcard, dynamic routes)
+      handleHttpError: 'warn',
+      entries: [
+        '/',
+        '/HTMLPlayerBeta',
+        '/about',
+        '/abouthtmlplayer',
+        '/abouthtmlreader',
+        '/abouthtmlrunner',
+        '/abouthtmlnodemapper',
+        '/abouthtmlnotes',
+        '/abouthtmleditor',
+        '/beta',
+        '/contact',
+        '/docs',
+        '/htmlchat',
+        '/htmleditor',
+        '/htmlnodemapper',
+        '/htmlnotes',
+        '/htmlplayer',
+        '/htmlplayerbeta',
+        '/htmlreader',
+        '/htmlrunner'
+      ]
     }
   }
 };
