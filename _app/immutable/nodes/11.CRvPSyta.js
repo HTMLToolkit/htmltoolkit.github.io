@@ -1,0 +1,1 @@
+import"../chunks/CWj6FrbW.js";import"../chunks/X-SYs-sX.js";import{o as t}from"../chunks/tjt-uG-Y.js";import{p as a,a as p}from"../chunks/DuS2yRP0.js";import{i as r}from"../chunks/C0SDnojZ.js";import{g as m}from"../chunks/CF0gRSri.js";function g(i,o){a(o,!1),t(()=>{m("/beta/HTMLChat",{replaceState:!0})}),r(),p()}export{g as component};
