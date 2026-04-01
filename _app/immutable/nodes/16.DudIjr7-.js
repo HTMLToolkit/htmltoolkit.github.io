@@ -1,0 +1,1 @@
+import"../chunks/CWj6FrbW.js";import"../chunks/-kS_vk2Z.js";import{o as r}from"../chunks/z4UsnxSg.js";import{j as t,k as p}from"../chunks/pIFvmOjv.js";import{i as a}from"../chunks/NkgInCnD.js";import{g as m}from"../chunks/BINiZlEl.js";function g(e,o){t(o,!1),r(()=>{m("/HTMLReader",{replaceState:!0})}),a(),p()}export{g as component};

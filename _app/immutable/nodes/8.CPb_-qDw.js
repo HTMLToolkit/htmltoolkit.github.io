@@ -1,1 +1,0 @@
-import"../chunks/CWj6FrbW.js";import"../chunks/DEQ1j3BG.js";import{o as t}from"../chunks/CWTLI_KO.js";import{j as r,k as a}from"../chunks/BWa9knCL.js";import{i as p}from"../chunks/BfCHST5J.js";import{g as m}from"../chunks/Dl6JKZB5.js";function g(e,o){r(o,!1),t(()=>{m("/beta/HTMLPlayer",{replaceState:!0})}),p(),a()}export{g as component};
