@@ -1,0 +1,13 @@
+diff --git a/node_modules/@sveltejs/kit/src/exports/vite/build/utils.js b/node_modules/@sveltejs/kit/src/exports/vite/build/utils.js
+index 8da2e70..cbdaeef 100644
+--- a/node_modules/@sveltejs/kit/src/exports/vite/build/utils.js
++++ b/node_modules/@sveltejs/kit/src/exports/vite/build/utils.js
+@@ -141,7 +141,7 @@ export function assets_base(config) {
+  * @returns {string} The function written as a string
+  */
+ export function create_function_as_string(name, placeholder_names, str) {
+-	str = s(str).slice(1, -1);
++	str = s(str).slice(1, -1).replace(/`/g, '\\`').replace(/\$\{/g, '\\${');
+ 	const args = placeholder_names ? placeholder_names.join(', ') : '';
+ 	return `function ${name}(${args}) { return \`${str}\`; }`;
+ }
