@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+  <url>
+    <loc>https://saasstarter.work/</loc>
+  </url>
+  <url>
+    <loc>https://saasstarter.work/blog</loc>
+  </url>
+  <url>
+    <loc>https://saasstarter.work/blog/awesome_post</loc>
+  </url>
+  <url>
+    <loc>https://saasstarter.work/blog/example_blog_post</loc>
+  </url>
+  <url>
+    <loc>https://saasstarter.work/blog/how_we_built_our_41kb_saas_website</loc>
+  </url>
+  <url>
+    <loc>https://saasstarter.work/contact_us</loc>
+  </url>
+  <url>
+    <loc>https://saasstarter.work/search</loc>
+  </url>
+</urlset>
