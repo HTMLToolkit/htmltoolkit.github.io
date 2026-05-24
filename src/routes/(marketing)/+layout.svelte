@@ -95,13 +95,14 @@
       >
     </nav>
     <aside>
-      <span class="footer-title opacity-80">Sponsor</span>
-      <a class="max-w-[260px]" href="https://getkiln.ai">
-        <div class="font-bold text-3xl mb-1">Kiln AI</div>
-        <div class="font-medium mb-3">Build High Quality AI Products</div>
+      <span class="footer-title opacity-80">Made By</span>
+      <a class="max-w-[260px]" href="https://nellowtcs.me" target="_blank">
+        <div class="font-bold text-3xl mb-1">NellowTCS</div>
+        <div class="font-medium mb-3">Generally silly guy >:3</div>
         <div class="font-light">
-          Use advanced AI tactics, and collaborate with your team. Free apps for
-          Mac and Windows.
+          NellowTCS (that's me!) is a software developer and content creator. 
+          He enjoys building projects that are both fun and useful, 
+          and sharing his knowledge with others through writing and open source contributions.
         </div>
         <div class="link text-sm font-bold mt-2">Learn More</div>
       </a>

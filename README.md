@@ -30,10 +30,6 @@
 - [Fully Functional Demo](https://saasstarter.work)
 - [Quick Start](#quick-start): Full docs from `git clone` to deployment.
 
-Created by the folks at [Kiln AI](https://getkiln.ai)! It's the easiest tool for fine-tuning LLM models, synthetic data generation, and collaborating on datasets. The Kiln app was built with SaaS Starter!
-
-**[Kiln AI](https://getkiln.ai)** Rapid AI Prototyping and Dataset Collaboration Tool
-
 ## Demo
 
 You can explore all the features using our fully functional demo [saasstarter.work](https://saasstarter.work).

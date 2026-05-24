@@ -1,52 +1,79 @@
 export const blogInfo = {
-  name: "SaaS Starter Blog",
-  description: "A sample blog",
+  name: "Blog",
+  description: "Our blog posts.",
 }
 
-export type BlogPost = {
-  link: string
-  date: string // date is a string 'YYYY-MM-DD'
+export interface BlogPost {
   title: string
   description: string
-  parsedDate?: Date // Optional because it's added dynamically
+  link: string
+  date: string | null
+  parsedDate: Date | null
+  updated?: string | null
+  tags?: string[]
+  coverImage?: string
+  featured?: boolean
 }
 
-// Update this list with the actual blog post list
-// Create a page in the "(posts)" directory for each entry
-const blogPosts: BlogPost[] = [
-  {
-    title: "How we built a beautiful 41kb SaaS website with this template",
-    description: "How to use this template you to bootstrap your own site.",
-    link: "/blog/how_we_built_our_41kb_saas_website",
-    date: "2024-03-10",
-  },
-  {
-    title: "Example Blog Post 2",
-    description: "Even more example content!",
-    link: "/blog/awesome_post",
-    date: "2022-9-23",
-  },
-  {
-    title: "Example Blog Post",
-    description: "A sample blog post, showing our blog engine",
-    link: "/blog/example_blog_post",
-    date: "2023-03-13",
-  },
-]
-
-// Parse post dates from strings to Date objects
-for (const post of blogPosts) {
-  if (!post.parsedDate) {
-    const dateParts = post.date.split("-")
-    post.parsedDate = new Date(
-      parseInt(dateParts[0]),
-      parseInt(dateParts[1]) - 1,
-      parseInt(dateParts[2]),
-    ) // Note: months are 0-based
-  }
+type Frontmatter = {
+  title?: string
+  slug?: string
+  excerpt?: string
+  description?: string
+  date?: string
+  updated?: string | null
+  hidden?: boolean
+  tags?: string[]
+  coverImage?: string
+  featured?: boolean
 }
 
-export const sortedBlogPosts = blogPosts.sort(
-  (a: BlogPost, b: BlogPost) =>
-    (b.parsedDate?.getTime() ?? 0) - (a.parsedDate?.getTime() ?? 0),
-)
+type MarkdownModule = {
+  metadata?: Frontmatter
+}
+
+const markdownPosts = import.meta.glob("./**/+page.md", {
+  eager: true,
+}) as Record<string, MarkdownModule>
+
+const parseDate = (dateString?: string): Date | null => {
+  if (!dateString) return null
+  const parsed = new Date(dateString)
+  return Number.isNaN(parsed.getTime()) ? null : parsed
+}
+
+const buildSlug = (path: string, metadata: Frontmatter): string => {
+  if (metadata.slug) return metadata.slug
+  const match = path.match(/\(posts\)\/([^/]+)\/\+page\.md$/)
+  return match?.[1] ?? ""
+}
+
+export const sortedBlogPosts: BlogPost[] = Object.entries(markdownPosts)
+  .reduce<BlogPost[]>((acc, [path, mod]) => {
+    const metadata = mod.metadata
+    if (!metadata || metadata.hidden) return acc
+
+    const slug = buildSlug(path, metadata)
+    if (!slug || !metadata.title) return acc
+
+    const parsedDate = parseDate(metadata.date)
+
+    acc.push({
+      title: metadata.title,
+      description: metadata.excerpt ?? metadata.description ?? "",
+      link: `/blog/${slug}`,
+      date: metadata.date ?? null,
+      parsedDate,
+      updated: metadata.updated,
+      tags: metadata.tags ?? [],
+      coverImage: metadata.coverImage,
+      featured: metadata.featured ?? false,
+    })
+
+    return acc
+  }, [])
+  .sort((a, b) => {
+    const aTime = a.parsedDate?.getTime() ?? 0
+    const bTime = b.parsedDate?.getTime() ?? 0
+    return bTime - aTime
+  })

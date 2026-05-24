@@ -1,5 +1,6 @@
 <script lang="ts">
   import { sortedBlogPosts, blogInfo } from "./posts"
+  import SubscribeForm from "$lib/components/SubscribeForm.svelte"
 </script>
 
 <svelte:head>
@@ -26,22 +27,32 @@
   </div>
   <div class="text-lg text-center">A demo blog with sample content.</div>
 
-  {#each sortedBlogPosts as post}
-    <a href={post.link}>
-      <div class="card my-6 bg-white shadow-xl flex-row overflow-hidden">
-        <div class="flex-none w-6 md:w-32 bg-secondary"></div>
-        <div class="py-6 px-6">
-          <div class="text-xl">{post.title}</div>
-          <div class="text-sm text-accent">
-            {post.parsedDate?.toLocaleDateString("en-US", {
-              month: "short",
-              day: "numeric",
-              year: "numeric",
-            })}
+  <div class="mt-10 space-y-6">
+    {#each sortedBlogPosts as post}
+      <a href={post.link} class="block">
+        <div
+          class="card bg-base-100 shadow-lg shadow-base-300/15 flex-row overflow-hidden transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-base-300/20"
+        >
+          <div class="flex-none w-6 md:w-32 bg-secondary"></div>
+          <div class="py-6 px-6">
+            <div class="text-xl font-semibold text-base-content">
+              {post.title}
+            </div>
+            <div class="text-sm text-accent mt-1">
+              {post.parsedDate?.toLocaleDateString("en-US", {
+                month: "short",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </div>
+            <div class="text-base-content/70 mt-2">{post.description}</div>
           </div>
-          <div class="text-slate-500">{post.description}</div>
         </div>
-      </div>
-    </a>
-  {/each}
+      </a>
+    {/each}
+  </div>
+
+  <div class="my-12">
+    <SubscribeForm />
+  </div>
 </div>
