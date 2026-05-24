@@ -1,1 +1,0 @@
-import{R as u,g as y,S as _,T as g,h as t,C as o,u as i,U as l,i as d,q as p,j as m}from"./S1GdrJed.js";function C(n,r){let s=null,E=t;var a;if(t){s=p;for(var e=m(document.head);e!==null&&(e.nodeType!==o||e.data!==n);)e=i(e);if(e===null)l(!1);else{var f=i(e);e.remove(),d(f)}}t||(a=document.head.appendChild(u()));try{y(()=>r(a),_|g)}finally{E&&(l(!0),d(s))}}export{C as h};
