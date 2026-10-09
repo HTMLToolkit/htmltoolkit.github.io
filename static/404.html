@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found - HTMLToolkit</title>
+    <meta name="robots" content="noindex" />
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+        background: #fefbf6;
+        color: #180042;
+        padding: 2rem;
+      }
+      .card {
+        max-width: 32rem;
+        text-align: center;
+      }
+      h1 {
+        font-size: 4rem;
+        margin: 0;
+        background: linear-gradient(90deg, #180042, #db2777);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      p {
+        opacity: 0.75;
+        font-size: 1.05rem;
+        line-height: 1.6;
+      }
+      .actions {
+        margin-top: 1.5rem;
+        display: flex;
+        gap: 0.75rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .btn {
+        border: 1px solid #180042;
+        border-radius: 9999px;
+        padding: 0.6rem 1.2rem;
+        text-decoration: none;
+        font-weight: 600;
+        color: #180042;
+      }
+      .btn.primary {
+        background: #180042;
+        color: #fefbf6;
+      }
+    </style>
+    <script>
+      ;(function () {
+        var canonical = {
+          about: "about",
+          blog: "blog",
+          search: "search",
+          "sitemap.xml": "sitemap.xml",
+          "rss.xml": "rss.xml",
+          beta: "beta",
+          htmlplayer: "HTMLPlayer",
+          htmlrunner: "HTMLRunner",
+          htmlreader: "HTMLReader",
+          htmlnotes: "HTMLNotes",
+          htmleditor: "HTMLEditor",
+          htmlpreview: "HTMLPreview",
+          htmltrack: "HTMLTrack",
+          htmlchat: "HTMLChat",
+          cbzreader: "CBZReader",
+          prism: "Prism",
+          htmlvisualizer: "HTMLVisualizer",
+          lrcgetter: "LRCGetter",
+        }
+        var path = decodeURIComponent(location.pathname)
+        var trailing = path.length > 1 && path.charAt(path.length - 1) === "/"
+        var segments = path.split("/").filter(Boolean)
+        var changed = false
+        var fixed = segments.map(function (segment) {
+          var key = segment.toLowerCase()
+          if (Object.prototype.hasOwnProperty.call(canonical, key)) {
+            if (canonical[key] !== segment) changed = true
+            return canonical[key]
+          }
+          return segment
+        })
+        if (changed) {
+          var next = "/" + fixed.join("/") + (trailing ? "/" : "")
+          location.replace(next + location.search + location.hash)
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <main class="card">
+      <h1>404</h1>
+      <p>
+        We couldn't find that page. It may have moved, or the URL just needs a
+        different case.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="/">Go home</a>
+        <a class="btn" href="/about">Browse projects</a>
+      </div>
+    </main>
+  </body>
+</html>

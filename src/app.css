@@ -8,7 +8,7 @@
 }
 
 @plugin "daisyui/theme" {
-  name: "saasstartertheme";
+  name: "htmltoolkit";
   default: true;
   /* set as default */
   prefersdark: false;
@@ -64,7 +64,6 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-
   *,
   ::after,
   ::before,

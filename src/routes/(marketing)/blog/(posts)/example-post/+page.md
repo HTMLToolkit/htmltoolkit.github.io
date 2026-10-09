@@ -1,13 +1,13 @@
 ---
 title: Example Post
 slug: example-post
-# coverImage: 
+# coverImage:
 excerpt: Example Page
 date: 2025-10-02T02:00:00-06:00
 updated: null
 hidden: false
-tags: ['Examples', 'Testing']
-keywords: ['Tests']
+tags: ["Examples", "Testing"]
+keywords: ["Tests"]
 featured: true
 ---
 
@@ -29,10 +29,10 @@ featured: true
 
 ## 2. Text Emphasis
 
-* *Italic* or *Italic*
-* **Bold** or **Bold**
-* ***Bold and Italic***
-* ~~Strikethrough~~
+- _Italic_ or _Italic_
+- **Bold** or **Bold**
+- **_Bold and Italic_**
+- ~~Strikethrough~~
 
 ---
 
@@ -40,10 +40,10 @@ featured: true
 
 ### Unordered Lists
 
-* Item 1
+- Item 1
 
-* Item 2
-  * Sub-item A
+- Item 2
+  - Sub-item A
 
 ### Ordered Lists
 
@@ -53,9 +53,9 @@ featured: true
 
 ### Task Lists
 
-* [x] Completed task
+- [x] Completed task
 
-* [ ] Incomplete task
+- [ ] Incomplete task
 
 ---
 
@@ -77,8 +77,11 @@ featured: true
 ## 5. Blockquotes
 
 > "Markdown is intended to be easy-to-read."
+>
 > > Nested blockquote text.
+> >
 > > > More nested text.
+
 ---
 
 ## 6. Code
@@ -91,7 +94,7 @@ Use `npm install` to start.
 
 ```javascript
 function helloWorld() {
-  console.log("Hello, world!");
+  console.log("Hello, world!")
 }
 ```
 
@@ -100,7 +103,7 @@ function helloWorld() {
 ## 7. Tables
 
 | Feature | Syntax | Support |
-|:--------|:------:|--------:|
+| :------ | :----: | ------: |
 | Left    | Center |   Right |
 | Text    |  Text  |    Text |
 
@@ -108,9 +111,9 @@ function helloWorld() {
 
 ## 8. Miscellaneous
 
-* **Footnotes**: Text[^1]  
+- **Footnotes**: Text[^1]
 
 [^1]: Footnote description.
 
-* **Emoji**: :smile:
-* **HTML**: <span style="color:red">Red Text</span>
+- **Emoji**: :smile:
+- **HTML**: <span style="color:red">Red Text</span>

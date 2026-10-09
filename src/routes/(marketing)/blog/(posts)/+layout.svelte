@@ -126,10 +126,7 @@
   {@html jsonldScript}
 </svelte:head>
 
-<article
-  data-blog-article
-  class="mx-auto max-w-3xl px-6 py-12"
->
+<article data-blog-article class="mx-auto max-w-3xl px-6 py-12">
   <div class="mb-8">
     <div class="badge badge-outline mb-3 text-sm">
       {currentPost.parsedDate?.toLocaleDateString("en-US", {

@@ -16,11 +16,11 @@
   <div class="flex-none">
     <ul class="menu menu-horizontal px-1 hidden sm:flex font-bold text-lg">
       <li class="md:mx-4">
-        <a
-          href="https://github.com/CriticalMoments/CMSaasStarter"
-          class="border border-primary">★ us on Github</a
+        <a href="https://github.com/HTMLToolkit" class="border border-primary"
+          >★ us on Github</a
         >
       </li>
+      <li class="md:mx-2"><a href="/about">Projects</a></li>
       <li class="md:mx-2"><a href="/blog">Blog</a></li>
       <li class="md:mx-0">
         <a href="/search" aria-label="Search">
@@ -60,12 +60,12 @@
         tabindex="0"
         class="menu menu-lg dropdown-content mt-3 z-1 p-2 shadow-sm bg-base-100 rounded-box w-52 font-bold"
       >
+        <li><a href="/about">Projects</a></li>
         <li><a href="/blog">Blog</a></li>
         <li><a href="/search">Search</a></li>
         <li>
-          <a
-            href="https://github.com/CriticalMoments/CMSaasStarter"
-            class="border border-primary">★ us on Github</a
+          <a href="https://github.com/HTMLToolkit" class="border border-primary"
+            >★ us on Github</a
           >
         </li>
       </ul>
@@ -87,11 +87,10 @@
     <nav>
       <span class="footer-title opacity-80">Explore</span>
       <a class="link link-hover mb-1" href="/">Overview</a>
+      <a class="link link-hover my-1" href="/about">Projects</a>
       <a class="link link-hover my-1" href="/blog">Blog</a>
-      <a class="link link-hover my-1" href="/contact_us">Contact Us</a>
-      <a
-        class="link link-hover my-1"
-        href="https://github.com/CriticalMoments/CMSaasStarter">Github</a
+      <a class="link link-hover my-1" href="https://github.com/HTMLToolkit"
+        >Github</a
       >
     </nav>
     <aside>
@@ -100,9 +99,9 @@
         <div class="font-bold text-3xl mb-1">NellowTCS</div>
         <div class="font-medium mb-3">Generally silly guy >:3</div>
         <div class="font-light">
-          NellowTCS (that's me!) is a software developer and content creator. 
-          He enjoys building projects that are both fun and useful, 
-          and sharing his knowledge with others through writing and open source contributions.
+          NellowTCS (that's me!) is a software developer and content creator. He
+          enjoys building projects that are both fun and useful, and sharing his
+          knowledge with others through writing and open source contributions.
         </div>
         <div class="link text-sm font-bold mt-2">Learn More</div>
       </a>

@@ -1,5 +1,5 @@
 {
-  "name": "cmsassstarter",
+  "name": "htmltoolkit",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "optimize-images": "image-transmutation --run --sourceFolder './build/images' --targetFolder './build/images.optimized' --inputFormats 'jpg' --inputFormats 'jpeg' --inputFormats 'png' --outputFormats 'png' --outputFormats 'webp' --outputFormats 'avif' && mv ./build/images ./build/images.bak && mv ./build/images.optimized ./build/images && rm -rf ./build/images.bak",
-    "postbuild": "npm run optimize-images && svelte-sitemap --domain https://htmltoolkit.github.io/",
+    "postbuild": "npm run optimize-images && svelte-sitemap",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "test": "vitest",

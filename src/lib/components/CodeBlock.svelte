@@ -14,7 +14,9 @@
   class="relative my-8 overflow-hidden rounded-box border border-base-300 bg-base-200 shadow-lg shadow-base-300/15 text-sm md:text-base"
   class:-mx-6={fullBleed}
 >
-  <div class="flex items-center justify-between gap-3 border-b border-base-300/60 px-4 py-3">
+  <div
+    class="flex items-center justify-between gap-3 border-b border-base-300/60 px-4 py-3"
+  >
     <div class="flex flex-wrap items-center gap-2">
       {#if filename}
         <span class="badge badge-outline badge-sm">{filename}</span>

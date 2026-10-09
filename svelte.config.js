@@ -14,7 +14,6 @@ const markdownExtensions = [".md"]
 const config = {
   kit: {
     adapter: adapter({
-      fallback: "index.html",
       strict: false,
     }),
     // allow up to 150kb of style to be inlined with the HTML

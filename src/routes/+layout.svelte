@@ -1,6 +1,9 @@
 <script lang="ts">
   import "../app.css"
   import { navigating } from "$app/stores"
+  import { afterNavigate } from "$app/navigation"
+  import { browser } from "$app/environment"
+  import { canonicalizePath } from "$lib/normalize"
   import { expoOut } from "svelte/easing"
   import { slide } from "svelte/transition"
   interface Props {
@@ -8,6 +11,14 @@
   }
 
   let { children }: Props = $props()
+
+  afterNavigate(() => {
+    if (!browser) return
+    const corrected = canonicalizePath(location.pathname)
+    if (corrected) {
+      location.replace(corrected + location.search + location.hash)
+    }
+  })
 </script>
 
 {#if $navigating}
