@@ -1,0 +1,1 @@
+const t="HTMLToolkit",e="https://htmltoolkit.github.io",i="A suite of lightweight, browser-based tools for working with HTML, CSS, and JavaScript. Offline-first, no telemetry, zero dependencies.";export{t as W,i as a,e as b};
