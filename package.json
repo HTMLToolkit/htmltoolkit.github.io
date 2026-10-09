@@ -35,30 +35,31 @@
     "fuse.js": "^7.0.0",
     "glob": "^10.4.5",
     "html-to-text": "^9.0.5",
+    "image-transmutation": "^1.0.1",
     "jsdom": "^24.1.1",
+    "mdsvex": "^0.11.2",
     "patch-package": "^8.0.1",
     "postcss": "^8.4.31",
     "prettier": "^3.1.0",
     "prettier-plugin-svelte": "^3.2.6",
-    "mdsvex": "^0.11.2",
+    "rehype-autolink-headings": "^6.1.1",
     "rehype-external-links": "^3.0.0",
     "rehype-slug": "^5.0.0",
-    "rehype-autolink-headings": "^6.1.1",
     "remark-emoji": "^5.0.1",
     "remark-gfm": "^4.0.1",
     "super-sitemap": "^1.0.7",
     "svelte": "^5.0.0",
     "svelte-check": "^4.0.0",
+    "svelte-sitemap": "^3.0.0",
     "tailwindcss": "^4.0.9",
     "typescript": "^5.5.0",
     "vite": "^6.3.5",
-    "vitest": "^3.0.7",
-    "image-transmutation": "^1.0.1",
-    "svelte-sitemap": "^3.0.0"
+    "vitest": "^3.0.7"
   },
   "type": "module",
   "dependencies": {
     "handlebars": "^4.7.8",
+    "lucide-svelte": "^1.0.1",
     "resend": "^3.5.0"
   }
 }

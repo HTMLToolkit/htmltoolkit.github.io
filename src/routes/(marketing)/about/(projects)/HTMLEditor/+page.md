@@ -5,6 +5,7 @@ tagline: A drag-and-drop HTML editor
 summary: Build and prototype page layouts in the browser with drag and drop, live preview, and code editing.
 repo: https://github.com/HTMLToolkit/HTMLEditor
 live: https://htmltoolkit.github.io/HTMLEditor/
+beta: https://htmltoolkit.github.io/beta/HTMLEditor/
 tech:
   - HTML
   - JavaScript

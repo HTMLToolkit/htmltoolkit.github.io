@@ -5,6 +5,9 @@
     WebsiteDescription,
   } from "./../../config"
   import { featuredProject, sortedProjects } from "./about/projects"
+  import ProjectIcon from "$lib/components/ProjectIcon.svelte"
+  import StarCount from "$lib/components/StarCount.svelte"
+  import { AppWindow, GitFork, ShieldCheck, WifiOff } from "lucide-svelte"
 
   const ldJson = {
     "@context": "https://schema.org",
@@ -21,23 +24,23 @@
     {
       name: "Offline-first",
       description: "Open a tool and it just works, network or not.",
-      svg: `<path d="M12 3v18M5 10l7-7 7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+      icon: WifiOff,
     },
     {
       name: "No telemetry",
       description: "No analytics, ads, or external requests. Ever.",
-      svg: `<path d="M4 4l16 16M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+      icon: ShieldCheck,
     },
     {
       name: "No install",
       description:
         "Everything runs in the browser, with a PWA when you want one.",
-      svg: `<path d="M3 5h18v14H3zM3 9h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+      icon: AppWindow,
     },
     {
       name: "Open source",
       description: "MIT and GPL code you can read, fork, and improve.",
-      svg: `<path d="M9 19c-4 1.5-4-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.4.4-.5 1-.5 2V21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`,
+      icon: GitFork,
     },
   ]
 </script>
@@ -159,25 +162,35 @@
       >
         <div class="card-body">
           <div class="flex items-start justify-between">
-            <div class="text-primary w-10 h-10 [&_svg]:w-full [&_svg]:h-full">
-              <!-- eslint-disable-next-line svelte/no-at-html-tags -->
-              {@html project.icon}
+            <div class="text-primary w-10 h-10">
+              <ProjectIcon name={project.icon} size={40} />
             </div>
-            {#if project.featured}
-              <span class="badge badge-primary badge-sm">Flagship</span>
-            {:else if project.kind === "experiment"}
-              <span class="badge badge-ghost badge-sm">Experiment</span>
-            {/if}
+            <div class="flex flex-col items-end gap-2">
+              {#if project.featured}
+                <span class="badge badge-primary badge-sm">Flagship</span>
+              {:else if project.kind === "experiment"}
+                <span class="badge badge-ghost badge-sm">Experiment</span>
+              {/if}
+              <StarCount repo={project.repo} />
+            </div>
           </div>
           <h3 class="card-title text-xl mt-3">{project.name}</h3>
           <p class="text-sm text-base-content/70">{project.summary}</p>
-          <div class="mt-auto flex items-center gap-3 pt-4">
+          <div class="mt-auto flex items-center gap-2 pt-4">
             {#if project.live}
               <a
                 class="btn btn-sm btn-primary rounded-full flex-1"
                 href={project.live}
                 target="_blank"
-                rel="noreferrer">Launch</a
+                rel="noreferrer">Open</a
+              >
+            {/if}
+            {#if project.beta}
+              <a
+                class="btn btn-sm btn-secondary rounded-full flex-1"
+                href={project.beta}
+                target="_blank"
+                rel="noreferrer">Beta</a
               >
             {/if}
             <a
@@ -199,12 +212,12 @@
   <div class="max-w-[1064px] mx-auto px-6 py-16">
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
       {#each values as value}
+        {@const Icon = value.icon}
         <div class="text-center">
           <div
-            class="w-12 h-12 mx-auto text-primary mb-4 [&_svg]:w-full [&_svg]:h-full"
+            class="w-12 h-12 mx-auto text-primary mb-4 flex items-center justify-center"
           >
-            <!-- eslint-disable-next-line svelte/no-at-html-tags -->
-            {@html value.svg}
+            <Icon size={40} strokeWidth={1.8} />
           </div>
           <h3 class="font-bold text-lg">{value.name}</h3>
           <p class="text-sm text-base-content/70 mt-1">{value.description}</p>

@@ -1,5 +1,3 @@
-import { genericIcon, projectIcons } from "$lib/projectIcons"
-
 export interface Project {
   slug: string
   name: string
@@ -70,10 +68,7 @@ export const projects: Project[] = Object.entries(markdownProjects)
       license: metadata.license ?? "MIT",
       featured: metadata.featured ?? false,
       kind: (metadata.kind as Project["kind"]) ?? "tool",
-      icon:
-        metadata.icon && projectIcons[metadata.icon]
-          ? projectIcons[metadata.icon]
-          : genericIcon,
+      icon: typeof metadata.icon === "string" ? metadata.icon : "generic",
       screenshots: metadata.screenshots ?? [],
     })
 

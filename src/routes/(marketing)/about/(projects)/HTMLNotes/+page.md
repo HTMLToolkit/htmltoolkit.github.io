@@ -5,6 +5,7 @@ tagline: A small Markdown notes app
 summary: A lightweight notes app with Markdown editing, import and export, and offline support.
 repo: https://github.com/HTMLToolkit/HTMLNotes
 live: https://htmltoolkit.github.io/HTMLNotes/
+beta: https://htmltoolkit.github.io/beta/HTMLNotes/
 tech:
   - HTML
   - JavaScript

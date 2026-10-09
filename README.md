@@ -34,6 +34,7 @@ The organization website and tools directory for **[HTMLToolkit](https://github.
 - **Framework:** SvelteKit (static adapter)
 - **Styling:** Tailwind CSS + DaisyUI
 - **Content:** mdsvex (Markdown) with frontmatter
+- **Icons:** lucide-svelte
 - **Search:** Fuse.js over a build-time index
 - **Hosting:** GitHub Pages via GitHub Actions
 
@@ -89,7 +90,7 @@ Write the long-form description here in **Markdown**. This becomes the
 
 Then:
 
-1. Add an icon key to `src/lib/projectIcons.ts` if you used a new one.
+1. Pick an icon key from `src/lib/projectIcons.ts` (lucide-svelte icons), or add a new one there.
 2. Add the tool's lowercase slug to the canonical map in `src/lib/normalize.ts` and `static/404.html`.
 3. Drop any screenshots in `static/images/projects/<tool>/`.
 

@@ -5,6 +5,7 @@ tagline: A single-file ePub reader for the browser
 summary: A quick ePub reader that works offline once the page has loaded.
 repo: https://github.com/HTMLToolkit/HTMLReader
 live: https://htmltoolkit.github.io/HTMLReader/
+beta: https://htmltoolkit.github.io/beta/HTMLReader/
 tech:
   - HTML
   - JavaScript

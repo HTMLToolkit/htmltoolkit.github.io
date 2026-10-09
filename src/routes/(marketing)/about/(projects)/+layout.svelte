@@ -4,6 +4,7 @@
   import { WebsiteName } from "./../../../../config"
   import { getProject, sortedProjects, type Project } from "./../projects"
   import StarCount from "$lib/components/StarCount.svelte"
+  import ProjectIcon from "$lib/components/ProjectIcon.svelte"
   interface Props {
     children?: import("svelte").Snippet
   }
@@ -78,9 +79,8 @@
   <a href="/about" class="link text-sm text-base-content/60">← All projects</a>
 
   <header class="mt-6 flex flex-col gap-6 sm:flex-row sm:items-start">
-    <div class="text-primary w-14 h-14 flex-none [&_svg]:w-full [&_svg]:h-full">
-      <!-- eslint-disable-next-line svelte/no-at-html-tags -->
-      {@html project.icon}
+    <div class="text-primary w-14 h-14 flex-none">
+      <ProjectIcon name={project.icon} size={56} />
     </div>
     <div>
       <div class="flex flex-wrap items-center gap-3">
@@ -161,8 +161,7 @@
           class="flex items-center gap-2 rounded-full border border-base-300 bg-base-100 px-4 py-2 text-sm shadow-sm transition-transform duration-200 hover:-translate-y-0.5"
         >
           <span class="text-primary w-5 h-5 [&_svg]:w-full [&_svg]:h-full">
-            <!-- eslint-disable-next-line svelte/no-at-html-tags -->
-            {@html other.icon}
+            <ProjectIcon name={other.icon} size={20} />
           </span>
           {other.name}
         </a>
